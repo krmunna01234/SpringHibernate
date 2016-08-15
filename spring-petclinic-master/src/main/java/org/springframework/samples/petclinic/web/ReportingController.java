@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
+//// commit test !!
+
 @Controller
 public class ReportingController {
 	private final ClinicService clinicService;
