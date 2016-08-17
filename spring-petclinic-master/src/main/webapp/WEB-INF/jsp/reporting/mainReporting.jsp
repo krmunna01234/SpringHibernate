@@ -22,7 +22,7 @@
 				<p>Bank Reporting tool</p>
 			</div>
 			<div id="menu1" class="tab-pane fade">
-				<h3>IPRE</h3>
+				<h3>Tax Outsourcing</h3>
 				<datatables:table id="vets" data="${vets.vetList}" row="vet"
 					cssClass="table table-striped" pageable="false" info="false">
 					<datatables:column title="Name">
@@ -37,7 +37,7 @@
 				</datatables:table>
 			</div>
 			<div id="menu2" class="tab-pane fade">
-				<h3>TAPI</h3>
+				<h3>IPRE</h3>
 				<datatables:table id="vets" data="${vets.vetList}" row="vet"
 					cssClass="table table-striped" pageable="false" info="false">
 					<datatables:column title="Name">
@@ -52,9 +52,22 @@
 				</datatables:table>
 			</div>
 			<div id="menu3" class="tab-pane fade">
-				<h3>Menu 3</h3>
-				<p>Eaque ipsa quae ab illo inventore veritatis et quasi
-					architecto beatae vitae dicta sunt explicabo.</p>
+			<h3>TAPI Interface</h3>
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button"
+						data-toggle="dropdown">
+						Transaction File Types <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Trading</a></li>
+						<li><a href="#">Swaping</a></li>
+					</ul>
+					<div class="container">
+						<div></div>
+					</div>
+					
+				</div>
+				
 			</div>
 		</div>
 	</div>
