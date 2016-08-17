@@ -5,7 +5,15 @@
 <%@ taglib prefix="datatables"
 	uri="http://github.com/dandelion/datatables"%>
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags"%>
-
+<script type="text/javascript">
+	function loadXMLDoc() {
+		//var selectBox = document.getElementById("selectFileType");
+		var selectBox=document.dummy.sele.value
+		//var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+		//alert(selectBox);
+		document.getElementById("item").innerHTML = selectBox;
+	}
+</script>
 <petclinic:layout pageName="reports">
 	<h2>Bank Reports</h2>
 	<div class="container">
@@ -52,22 +60,23 @@
 				</datatables:table>
 			</div>
 			<div id="menu3" class="tab-pane fade">
-			<h3>TAPI Interface</h3>
+				<h3>TAPI Interface</h3>
 				<div class="dropdown">
-					<button class="btn btn-primary dropdown-toggle" type="button"
-						data-toggle="dropdown">
-						Transaction File Types <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Trading</a></li>
-						<li><a href="#">Swaping</a></li>
-					</ul>
-					<div class="container">
-						<div></div>
-					</div>
+					<form name="dummy">
+						<select name="sele" onchange="loadXMLDoc()">
+							<option>value</option>
+							<option value="Trading">Trading</option>
+							<option value="Swaping">Swaping</option>
+						</select>
+					</form>
+					selected items <span id="item"></span><br> 
+					
+
+				</div>
+				<div>
+					
 					
 				</div>
-				
 			</div>
 		</div>
 	</div>
